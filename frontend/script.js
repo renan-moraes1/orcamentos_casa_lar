@@ -1,8 +1,8 @@
 // frontend/script.js
 
 // URL do nosso backend
-//const API_URL = 'http://localhost:3001/api/orcamento';
-const API_URL = '/api/orcamento';
+const API_URL = 'http://localhost:3001/api/orcamento';
+//const API_URL = '/api/orcamento';
 
 // Estado da aplicação
 let orcamentoItens = [];
@@ -152,7 +152,8 @@ async function gerarRelatorio() {
 
 // Constrói o HTML do relatório final
 function mostrarRelatorio(relatorio) {
-  relatorioContainer.style.display = 'block'; // Mostra a seção do relatório
+  //relatorioContainer.style.display = 'block'; // Mostra a seção do relatório
+  relatorioContainer.classList.remove('d-none');
   relatorioDetalhes.innerHTML = ''; // Limpa relatório anterior
 
   let tabelaHtml = `
