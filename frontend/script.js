@@ -90,11 +90,11 @@ function atualizarTabela() {
     tr.innerHTML = `
       <td>${item.produto}</td>
       <td>${item.marca}</td>
-      <td style="text-align: right;">${item.quantidade}</td>
-      <td style="text-align: right;">${formatarMoeda(item.valorUnitario)}</td>
-      <td style="text-align: right;">${formatarMoeda(totalItem)}</td>
+      <td >${item.quantidade}</td>
+      <td >${formatarMoeda(item.valorUnitario)}</td>
+      <td >${formatarMoeda(totalItem)}</td>
       <td>
-        <button class="btn-danger" data-id="${item.id}">Remover</button>
+        <button class="btn btn-danger" data-id="${item.id}"><i class="bi bi-trash"></i> Remover</button>
       </td>
     `;
     listaItensTbody.appendChild(tr);
@@ -157,7 +157,7 @@ function mostrarRelatorio(relatorio) {
 
   let tabelaHtml = `
     <p><strong>Data de Geração:</strong> ${new Date(relatorio.data).toLocaleString('pt-BR')}</p>
-    <table>
+    <table class="table">
       <thead>
         <tr>
           <th>Produto</th>
@@ -175,9 +175,9 @@ function mostrarRelatorio(relatorio) {
       <tr>
         <td>${item.produto}</td>
         <td>${item.marca}</td>
-        <td style="text-align: right;">${item.quantidade}</td>
-        <td style="text-align: right;">${formatarMoeda(item.valorUnitario)}</td>
-        <td style="text-align: right;"><strong>${formatarMoeda(item.total)}</strong></td>
+        <td >${item.quantidade}</td>
+        <td >${formatarMoeda(item.valorUnitario)}</td>
+        <td ><strong>${formatarMoeda(item.total)}</strong></td>
       </tr>
     `;
   });
