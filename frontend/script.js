@@ -1,8 +1,8 @@
 // frontend/script.js
 
 // URL do nosso backend
-const API_URL = 'http://localhost:3001/api/orcamento';
-//const API_URL = '/api/orcamento';
+//const API_URL = 'http://localhost:3001/api/orcamento';
+const API_URL = '/api/orcamento';
 
 // Estado da aplicação
 let orcamentoItens = [];
