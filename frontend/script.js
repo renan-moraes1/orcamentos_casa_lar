@@ -2,7 +2,8 @@
 
 // URL da API (ajusta automaticamente se for local ou servidor)
 // Se estiver dando erro 404 localmente, troque para 'http://localhost:3001/api/orcamento'
-const API_URL = 'http://localhost:3001/api/orcamento'; 
+//const API_URL = 'http://localhost:3001/api/orcamento';
+const API_URL = '/api/orcamento'; 
 
 // Estado da aplicação
 let orcamentoItens = [];
