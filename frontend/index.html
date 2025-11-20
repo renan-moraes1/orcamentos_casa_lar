@@ -35,7 +35,19 @@
 
 		<section class="formulario mt-5">
 			<div class="container pt-5 mb-4">
-				<h4 class="fw-bold">* Adicionar Item</h4>
+				<h4 class="fw-bold">* Dados do Orçamento</h4>
+
+				<div class="row mb-3">
+					<div class="col">
+						<div class="form-floating">
+							<input type="text" class="form-control" id="input-fornecedor"
+								placeholder="Nome do Fornecedor">
+							<label for="input-fornecedor">Nome do Fornecedor / Empresa:</label>
+						</div>
+					</div>
+				</div>
+
+				<h4 class="fw-bold mt-4">* Adicionar Item</h4>
 				<form id="form-item" class="row row-cols-1 row-cols-lg-2 border mb-2 p-3 rounded-3">
 					<div class="col">
 						<div class="form-floating mb-3">
@@ -51,23 +63,26 @@
 					</div>
 					<div class="col">
 						<div class="form-floating mb-3">
-							<input placeholder="quantidade" class="form-control" type="number" id="quantidade" min="1"
-								step="1" required>
-							<label for="quantidade">Quantidade:</label>
+							<input placeholder="quantidade" class="form-control" type="number" id="quantidade"
+								min="0.001" step="any" required>
+							<label for="quantidade">Quantidade (ex: 1.354):</label>
 						</div>
 					</div>
+
 					<div class="col">
 						<div class="form-floating mb-3">
 							<input placeholder="valor" class="form-control" type="number" id="valor" min="0.01"
-								step="0.01" required>
+								step="any" required>
 							<label for="valor">Valor Unitário (R$):</label>
 						</div>
+
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
 							<button class="btn btn-primary" type="submit"><i class="bi bi-plus"></i> Adicionar ao
 								Orçamento</button>
 						</div>
 					</div>
-				</form>
+			</div>
+			</form>
 			</div>
 		</section>
 
@@ -94,7 +109,8 @@
 					</div>
 					<div class="col">
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button id="gerar-relatorio" type="button" class="btn btn-success"><i class="bi bi-lightning"></i> Gerar
+							<button id="gerar-relatorio" type="button" class="btn btn-success"><i
+									class="bi bi-lightning"></i> Gerar
 								Relatório Detalhado</button>
 						</div>
 					</div>
@@ -109,7 +125,8 @@
 						<h4 class="fw-bold">* Relatório Final do Orçamento</h4>
 
 						<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-							<button id="baixar-pdf" type="button" class="btn btn-secondary"><i class="bi bi-filetype-pdf"></i> Baixar
+							<button id="baixar-pdf" type="button" class="btn btn-secondary"><i
+									class="bi bi-filetype-pdf"></i> Baixar
 								Relatório em PDF</button>
 						</div>
 
